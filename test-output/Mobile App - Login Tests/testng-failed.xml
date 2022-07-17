@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Mobile App - Login Tests]" guice-stage="DEVELOPMENT" allow-return-values="true">
+  <listeners>
+    <listener class-name="appium.base.TestListener"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="Positive Login Test(failed)">
+    <parameter name="password" value="Helloworld10"/>
+    <parameter name="username" value="juancarlosgularte@bettervet.com"/>
+    <classes>
+      <class name="ios.tests.LoginTests">
+        <methods>
+          <include name="setCapabilities"/>
+          <include name="shutDownApp"/>
+          <include name="positiveLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- ios.tests.LoginTests -->
+    </classes>
+  </test> <!-- Positive Login Test(failed) -->
+</suite> <!-- Failed suite [Mobile App - Login Tests] -->

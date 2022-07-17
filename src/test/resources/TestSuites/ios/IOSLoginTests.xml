@@ -1,0 +1,64 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="iOS - Login Tests" verbose="1" allow-return-values="true" parallel="tests" thread-count="1">
+
+	<listeners>
+		<listener class-name="appium.base.TestListener"></listener>
+	</listeners>
+	
+	<test name="Positive Login Test" >
+	<!--<parameter name="browser"  value="chrome"/>
+	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter>
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Helloworld10"/>-->
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Helloworld10"/>
+	    <classes>
+	       <class name="ios.tests.LoginTests">
+		       <methods>
+						<include name="positiveLogin"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Positive Login Test 2" >
+	<!--<parameter name="browser"  value="chrome"/>
+	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter>
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Helloworld10"/>-->
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Helloworld10"/>
+	    <classes>
+	       <class name="ios.tests.LoginTests">
+		       <methods>
+						<include name="positiveLogin2"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<!-- <test name="Negative Login Test - Invalid Credentials" >
+	    <classes>
+	       <class name="bettervet.ios.tests.LoginTests">
+		       <methods>
+						<include name="negativeLoginWithInvalidCredentials"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Negative Login Test - Error Messages" >
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Hello"/>
+	<parameter name="error"  value="Your password must contain at least one number, a capital letter and a minimum of 6 characters"/>
+	    <classes>
+	       <class name="bettervet.ios.tests.LoginTests">
+		       <methods>
+						<include name="negativeLoginErrors"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test> -->
+  
+</suite>
