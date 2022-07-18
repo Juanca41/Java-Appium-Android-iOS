@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="8" passed="0" failed="2" skipped="0">
+<testng-results ignored="12" total="21" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-17T08:24:33Z" name="Android - Login Tests" finished-at="2022-07-17T08:25:27Z" duration-ms="54046">
+  <suite started-at="2022-07-17T22:44:42Z" name="Android - Login Tests" finished-at="2022-07-17T22:47:44Z" duration-ms="182844">
     <groups>
     </groups>
-    <test started-at="2022-07-17T08:24:33Z" name="Positive Login Test Android" finished-at="2022-07-17T08:25:03Z" duration-ms="29946">
-      <class name="android.tests.LoginTests">
-        <test-method is-config="true" signature="setCapabilities(org.testng.ITestContext)[pri:0, instance:android.tests.LoginTests@3f67593e]" started-at="2022-07-17T08:24:34Z" name="setCapabilities" finished-at="2022-07-17T08:24:52Z" duration-ms="17854" status="PASS">
+    <test started-at="2022-07-17T22:44:42Z" name="Positive Login Test Android" finished-at="2022-07-17T22:45:11Z" duration-ms="29697">
+      <class name="android.tests.AndroidLoginTests">
+        <test-method is-config="true" signature="setCapabilities(org.testng.ITestContext)[pri:0, instance:android.tests.AndroidLoginTests@600b9d27]" started-at="2022-07-17T22:44:43Z" name="setCapabilities" finished-at="2022-07-17T22:44:58Z" duration-ms="15237" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2c07545f]]>
+                <![CDATA[org.testng.TestRunner@363a52f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setCapabilities -->
-        <test-method is-config="true" signature="openHomeScreen()[pri:0, instance:android.tests.LoginTests@3f67593e]" started-at="2022-07-17T08:24:52Z" name="openHomeScreen" finished-at="2022-07-17T08:24:52Z" duration-ms="667" status="PASS">
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@600b9d27]" started-at="2022-07-17T22:44:58Z" name="goToHomeScreen" finished-at="2022-07-17T22:44:59Z" duration-ms="915" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openHomeScreen -->
-        <test-method signature="positiveLogin(java.lang.String, java.lang.String)[pri:0, instance:android.tests.LoginTests@3f67593e]" started-at="2022-07-17T08:24:52Z" name="positiveLogin" finished-at="2022-07-17T08:25:03Z" duration-ms="10401" status="FAIL">
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="positiveLogin(java.lang.String, java.lang.String)[pri:0, instance:android.tests.AndroidLoginTests@600b9d27]" started-at="2022-07-17T22:44:59Z" name="positiveLogin" finished-at="2022-07-17T22:45:11Z" duration-ms="12092" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,241 +35,172 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.id: login_button]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.id: login_button
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$d27c0df4.getText(<generated>)
-at android.screens.WelcomeScreen.goToLoginScreen(WelcomeScreen.java:46)
-at android.tests.LoginTests.positiveLogin(LoginTests.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2df67916 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 24 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'MacBook-Pro-de-Juan.local', ip: 'fe80:0:0:0:1cde:79cc:93ab:6fee%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3.1', java.version: '11.0.15'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [ddfe6f44-fcf8-4660-80f2-599a13341a22, findElement {using=id, value=login_button}]
-Capabilities {appium:app: /Users/jcgularte/Desktop/Cu..., appium:appActivity: com.bettervet.MainActivity, appium:appPackage: com.bettervet, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/jcgularte/Desktop/Cu..., appActivity: com.bettervet.MainActivity, appPackage: com.bettervet, automationName: UiAutomator2, deviceName: Samsung Galaxy S21, platformName: android, setWebContentsDebuggingEnabled: true}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:setWebContentsDebuggingEnabled: true, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 2256, left: 0, top: 48, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: ddfe6f44-fcf8-4660-80f2-599a13341a22
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:80)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:165)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveLogin -->
-        <test-method is-config="true" signature="shutDown()[pri:0, instance:android.tests.LoginTests@3f67593e]" started-at="2022-07-17T08:25:03Z" name="shutDown" finished-at="2022-07-17T08:25:03Z" duration-ms="361" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at android.base.BaseMethodsAndroid.shutDown(BaseMethodsAndroid.java:71)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:android.tests.AndroidLoginTests@600b9d27]" started-at="2022-07-17T22:45:11Z" name="shutDown" finished-at="2022-07-17T22:45:11Z" duration-ms="567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- android.tests.LoginTests -->
+      </class> <!-- android.tests.AndroidLoginTests -->
     </test> <!-- Positive Login Test Android -->
-    <test started-at="2022-07-17T08:25:03Z" name="Positive Login Test 2" finished-at="2022-07-17T08:25:27Z" duration-ms="23967">
-      <class name="android.tests.LoginTests">
-        <test-method is-config="true" signature="setCapabilities(org.testng.ITestContext)[pri:0, instance:android.tests.LoginTests@432038ec]" started-at="2022-07-17T08:25:03Z" name="setCapabilities" finished-at="2022-07-17T08:25:16Z" duration-ms="12720" status="PASS">
+    <test started-at="2022-07-17T22:45:11Z" name="Negative Login Test" finished-at="2022-07-17T22:46:19Z" duration-ms="67912">
+      <class name="android.tests.AndroidLoginTests">
+        <test-method is-config="true" signature="setCapabilities(org.testng.ITestContext)[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:11Z" name="setCapabilities" finished-at="2022-07-17T22:45:25Z" duration-ms="13625" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@e57b96d]]>
+                <![CDATA[org.testng.TestRunner@a4add54]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setCapabilities -->
-        <test-method is-config="true" signature="openHomeScreen()[pri:0, instance:android.tests.LoginTests@432038ec]" started-at="2022-07-17T08:25:16Z" name="openHomeScreen" finished-at="2022-07-17T08:25:17Z" duration-ms="748" status="PASS">
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:25Z" name="goToHomeScreen" finished-at="2022-07-17T22:45:26Z" duration-ms="804" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openHomeScreen -->
-        <test-method signature="positiveLogin2()[pri:0, instance:android.tests.LoginTests@432038ec]" started-at="2022-07-17T08:25:17Z" name="positiveLogin2" finished-at="2022-07-17T08:25:27Z" duration-ms="10143" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.id: login_button]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.id: login_button
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$d27c0df4.getText(<generated>)
-at android.screens.WelcomeScreen.goToLoginScreen(WelcomeScreen.java:46)
-at android.tests.LoginTests.positiveLogin2(LoginTests.java:49)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@74645d1c (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 24 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'MacBook-Pro-de-Juan.local', ip: 'fe80:0:0:0:1cde:79cc:93ab:6fee%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3.1', java.version: '11.0.15'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [d6b44b46-9a02-4962-aabc-3991adfb98ce, findElement {using=id, value=login_button}]
-Capabilities {appium:app: /Users/jcgularte/Desktop/Cu..., appium:appActivity: com.bettervet.MainActivity, appium:appPackage: com.bettervet, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/jcgularte/Desktop/Cu..., appActivity: com.bettervet.MainActivity, appPackage: com.bettervet, automationName: UiAutomator2, deviceName: Samsung Galaxy S21, platformName: android, setWebContentsDebuggingEnabled: true}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2, appium:platformVersion: 12, appium:setWebContentsDebuggingEnabled: true, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:viewportRect: {height: 2256, left: 0, top: 48, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: d6b44b46-9a02-4962-aabc-3991adfb98ce
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:80)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:165)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrors(java.util.Map)[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:26Z" name="negativeLoginErrors" data-provider="csvReader" finished-at="2022-07-17T22:45:39Z" duration-ms="12829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgularte}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- positiveLogin2 -->
-        <test-method is-config="true" signature="shutDown()[pri:0, instance:android.tests.LoginTests@432038ec]" started-at="2022-07-17T08:25:27Z" name="shutDown" finished-at="2022-07-17T08:25:27Z" duration-ms="307" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at android.base.BaseMethodsAndroid.shutDown(BaseMethodsAndroid.java:71)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- negativeLoginErrors -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:39Z" name="goToHomeScreen" finished-at="2022-07-17T22:45:40Z" duration-ms="1095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrors(java.util.Map)[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:40Z" name="negativeLoginErrors" data-provider="csvReader" finished-at="2022-07-17T22:45:52Z" duration-ms="12539" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 characters, password=123, n=2, username=juancarlosgularte@bettervet.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrors -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:52Z" name="goToHomeScreen" finished-at="2022-07-17T22:45:54Z" duration-ms="1300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrors(java.util.Map)[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:45:54Z" name="negativeLoginErrors" data-provider="csvReader" finished-at="2022-07-17T22:46:06Z" duration-ms="12278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrors -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:46:06Z" name="goToHomeScreen" finished-at="2022-07-17T22:46:07Z" duration-ms="1071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrors(java.util.Map)[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:46:07Z" name="negativeLoginErrors" data-provider="csvReader" finished-at="2022-07-17T22:46:19Z" duration-ms="11947" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=This field is required, password=Helloworld10, n=4, username=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrors -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:android.tests.AndroidLoginTests@6d167f58]" started-at="2022-07-17T22:46:19Z" name="shutDown" finished-at="2022-07-17T22:46:19Z" duration-ms="314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- android.tests.LoginTests -->
-    </test> <!-- Positive Login Test 2 -->
+      </class> <!-- android.tests.AndroidLoginTests -->
+    </test> <!-- Negative Login Test -->
+    <test started-at="2022-07-17T22:46:19Z" name="Negative Login Test JSON" finished-at="2022-07-17T22:47:44Z" duration-ms="85163">
+      <class name="android.tests.AndroidLoginTests">
+        <test-method is-config="true" signature="setCapabilities(org.testng.ITestContext)[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:46:19Z" name="setCapabilities" finished-at="2022-07-17T22:46:33Z" duration-ms="13548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@141e5bef]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setCapabilities -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:46:33Z" name="goToHomeScreen" finished-at="2022-07-17T22:46:34Z" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrorsJson(java.util.HashMap)[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:46:34Z" name="negativeLoginErrorsJson" data-provider="jsonReader" finished-at="2022-07-17T22:46:47Z" duration-ms="12367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrorsJson -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:46:47Z" name="goToHomeScreen" finished-at="2022-07-17T22:46:48Z" duration-ms="1075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrorsJson(java.util.HashMap)[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:46:48Z" name="negativeLoginErrorsJson" data-provider="jsonReader" finished-at="2022-07-17T22:47:09Z" duration-ms="21471" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 characters, password=123, username=juancarlosgularte@bettervet.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrorsJson -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:47:09Z" name="goToHomeScreen" finished-at="2022-07-17T22:47:10Z" duration-ms="1005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrorsJson(java.util.HashMap)[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:47:10Z" name="negativeLoginErrorsJson" data-provider="jsonReader" finished-at="2022-07-17T22:47:22Z" duration-ms="11912" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrorsJson -->
+        <test-method is-config="true" signature="goToHomeScreen()[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:47:22Z" name="goToHomeScreen" finished-at="2022-07-17T22:47:23Z" duration-ms="902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToHomeScreen -->
+        <test-method signature="negativeLoginErrorsJson(java.util.HashMap)[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:47:23Z" name="negativeLoginErrorsJson" data-provider="jsonReader" finished-at="2022-07-17T22:47:44Z" duration-ms="20994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{errorMessage=This field is required, password=Helloworld10, username=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginErrorsJson -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:android.tests.AndroidLoginTests@54504ecd]" started-at="2022-07-17T22:47:44Z" name="shutDown" finished-at="2022-07-17T22:47:44Z" duration-ms="434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+      </class> <!-- android.tests.AndroidLoginTests -->
+    </test> <!-- Negative Login Test JSON -->
   </suite> <!-- Android - Login Tests -->
 </testng-results>

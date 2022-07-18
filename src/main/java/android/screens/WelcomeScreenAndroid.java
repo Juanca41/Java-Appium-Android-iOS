@@ -6,8 +6,7 @@ import org.testng.Assert;
 
 import appium.base.BaseActionsAndroid;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidBy;
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class WelcomeScreenAndroid extends BaseActionsAndroid{
 	
@@ -19,7 +18,7 @@ public class WelcomeScreenAndroid extends BaseActionsAndroid{
 	}
 	
 //	String[] login_button=new String[] {"id", "Login"};
-	@AndroidBy(xpath="//android.widget.TextView[@text='Login']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Login']")
 	public WebElement login_button;
 	
 //	@iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name='Experience better vet care from home']")
@@ -43,9 +42,14 @@ public class WelcomeScreenAndroid extends BaseActionsAndroid{
 
 	public void goToLoginScreen() {
 //		assertTexts();
-		Assert.assertEquals(login_button.getText(), "Login");
+//		Assert.assertEquals(login_button.getText(), "Login");
 //		login_button.click();
-		click(login_button);
+		while(check_if_element_is_present(login_button) == true) {
+			click(login_button);
+			if(check_if_element_is_present(login_button) == false) {
+				break;
+			}
+		}
 		log.info("User is navigating to Login screen by clicking Login button.");
 	}
 

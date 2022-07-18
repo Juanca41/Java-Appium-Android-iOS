@@ -1,0 +1,22 @@
+[
+	{
+		"username":"juancarlosgularte",
+		"password":"Helloworld10",
+		"errorMessage":"Please enter a valid email address"
+	},
+	{
+		"username":"juancarlosgularte@bettervet.com",
+		"password":"123",
+		"errorMessage":"Your password must contain at least one number, a capital letter and a minimum of 6 characters"
+	},
+	{
+		"username":"juancarlosgularte@bettervet.com",
+		"password":"",
+		"errorMessage":"This field is required"
+	},
+	{
+		"username":"",
+		"password":"Helloworld10",
+		"errorMessage":"This field is required"
+	}
+]

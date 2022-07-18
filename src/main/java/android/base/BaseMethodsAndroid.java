@@ -68,7 +68,7 @@ public class BaseMethodsAndroid extends BaseMethods{
 	@AfterClass(alwaysRun = true)
 	public void shutDown() {
 		driver.quit();
-		appium.stop();
+		stopAppium();
 	}
 //	
 //	@AfterClass(alwaysRun = true)

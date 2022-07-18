@@ -1,12 +1,17 @@
 package android.tests;
 import java.net.MalformedURLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import android.base.BaseMethodsAndroid;
+import android.screens.LoginScreenAndroid;
 import android.screens.WelcomeScreenAndroid;
 
-public class LoginTests extends BaseMethodsAndroid{
+public class AndroidLoginTests extends BaseMethodsAndroid{
 	
 //	public FirstTest(AndroidDriver<AndroidElement> driver) {
 //		super(driver);
@@ -21,7 +26,7 @@ public class LoginTests extends BaseMethodsAndroid{
 //		driver = setCapabilities();
 		
 		WelcomeScreenAndroid welcome_screen = new WelcomeScreenAndroid(driver, log);
-//		LoginScreen login_screen = new LoginScreen(driver, log);
+		LoginScreenAndroid login_screen = new LoginScreenAndroid(driver, log);
 		
 //		welcome_screen.assertTexts();
 		welcome_screen.goToLoginScreen();
@@ -33,7 +38,7 @@ public class LoginTests extends BaseMethodsAndroid{
 //			}
 //		}
 		
-//		login_screen.positiveLoginProcess(username, password);
+		login_screen.positiveLoginProcess(username, password);
 		
 	}
 	
@@ -71,15 +76,33 @@ public class LoginTests extends BaseMethodsAndroid{
 		
 	}
 	
-	@Parameters({ "username", "password", "error" })
-	@Test
-	public void negativeLoginErrors(String username, String password, String error) throws MalformedURLException{
+	@Test(dataProvider = "csvReader")//, dataProviderClass = CsvDataProviders.class)
+	public void negativeLoginErrors(Map<String, String> testData) throws MalformedURLException{
+		
+		String username = testData.get("username");
+		String password = testData.get("password");
+		String expected_error_msg = testData.get("errorMessage");
 		
 		WelcomeScreenAndroid welcome_screen = new WelcomeScreenAndroid(driver, log);
-//		LoginScreen login_screen = new LoginScreen(driver, log);
+		LoginScreenAndroid login_screen = new LoginScreenAndroid(driver, log);
 		
 		welcome_screen.goToLoginScreen();
-//		login_screen.negativeLoginProcess(username, password, error);
+		login_screen.negativeLoginProcess(username, password, expected_error_msg);
+		
+	}
+	
+	@Test(dataProvider = "jsonReader")//, dataProviderClass = CsvDataProviders.class)
+	public void negativeLoginErrorsJson(HashMap<String, String> testData) throws MalformedURLException{
+		
+		String username = testData.get("username");
+		String password = testData.get("password");
+		String expected_error_msg = testData.get("errorMessage");
+		
+		WelcomeScreenAndroid welcome_screen = new WelcomeScreenAndroid(driver, log);
+		LoginScreenAndroid login_screen = new LoginScreenAndroid(driver, log);
+		
+		welcome_screen.goToLoginScreen();
+		login_screen.negativeLoginProcess(username, password, expected_error_msg);
 		
 	}
 }

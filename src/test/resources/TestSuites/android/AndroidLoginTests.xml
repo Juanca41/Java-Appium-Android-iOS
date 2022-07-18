@@ -10,11 +10,11 @@
 	<!--<parameter name="browser"  value="chrome"/>
 	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter>
 	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
-	<parameter name="password"  value="Helloworld10"/>-->
+	<parameter name="password"  value="Helloworld10"/> -->
 	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
 	<parameter name="password"  value="Helloworld10"/>
 	    <classes>
-	       <class name="android.tests.LoginTests">
+	       <class name="android.tests.AndroidLoginTests">
 		       <methods>
 						<include name="positiveLogin"/>
 				</methods>
@@ -22,17 +22,29 @@
 	    </classes>
 	</test>
 	
-	<test name="Positive Login Test 2" >
+	<test name="Negative Login Test" >
 	<!--<parameter name="browser"  value="chrome"/>
 	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter>
 	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
 	<parameter name="password"  value="Helloworld10"/>-->
-	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
-	<parameter name="password"  value="Helloworld10"/>
 	    <classes>
-	       <class name="android.tests.LoginTests">
+	       <class name="android.tests.AndroidLoginTests">
 		       <methods>
-						<include name="positiveLogin2"/>
+						<include name="negativeLoginErrors"/>
+				</methods>
+	       </class>
+	    </classes>
+	</test>
+	
+	<test name="Negative Login Test JSON" >
+	<!--<parameter name="browser"  value="chrome"/>
+	<parameter name="deviceName" value="Samsung Galaxy S20 Ultra"></parameter>
+	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
+	<parameter name="password"  value="Helloworld10"/>-->
+	    <classes>
+	       <class name="android.tests.AndroidLoginTests">
+		       <methods>
+						<include name="negativeLoginErrorsJson"/>
 				</methods>
 	       </class>
 	    </classes>

@@ -1,5 +1,7 @@
 package ios.tests;
 import java.net.MalformedURLException;
+import java.util.Map;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -7,7 +9,7 @@ import ios.base.BaseMethodsIOS;
 import ios.screens.LoginScreenIOS;
 import ios.screens.WelcomeScreenIOS;
 
-public class LoginTests extends BaseMethodsIOS{
+public class IOSLoginTests extends BaseMethodsIOS{
 	
 //	public FirstTest(AndroidDriver<AndroidElement> driver) {
 //		super(driver);
@@ -72,15 +74,19 @@ public class LoginTests extends BaseMethodsIOS{
 		
 	}
 	
-	@Parameters({ "username", "password", "error" })
-	@Test
-	public void negativeLoginErrors(String username, String password, String error) throws MalformedURLException{
+//	@Parameters({ "username", "password", "error" })
+	@Test(dataProvider = "csvReader")//, dataProviderClass = CsvDataProviders.class)
+	public void negativeLoginErrors(Map<String, String> testData) throws MalformedURLException{
+		
+		String username = testData.get("username");
+		String password = testData.get("password");
+		String expected_error_msg = testData.get("errorMessage");
 		
 		WelcomeScreenIOS welcome_screen = new WelcomeScreenIOS(driver, log);
 		LoginScreenIOS login_screen = new LoginScreenIOS(driver, log);
 		
 		welcome_screen.goToLoginScreen();
-//		login_screen.negativeLoginProcess(username, password, error);
+//		login_screen.negativeLoginProcess(username, password, expected_error_msg);
 		
 	}
 }

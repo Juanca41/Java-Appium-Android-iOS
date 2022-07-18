@@ -14,7 +14,7 @@
 	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
 	<parameter name="password"  value="Helloworld10"/>
 	    <classes>
-	       <class name="ios.tests.LoginTests">
+	       <class name="ios.tests.IOSLoginTests">
 		       <methods>
 						<include name="positiveLogin"/>
 				</methods>
@@ -30,7 +30,7 @@
 	<parameter name="username"  value="juancarlosgularte@bettervet.com"/>
 	<parameter name="password"  value="Helloworld10"/>
 	    <classes>
-	       <class name="ios.tests.LoginTests">
+	       <class name="ios.tests.IOSLoginTests">
 		       <methods>
 						<include name="positiveLogin2"/>
 				</methods>
