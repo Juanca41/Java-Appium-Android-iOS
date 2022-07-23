@@ -2,6 +2,7 @@ package ios.tests;
 import java.net.MalformedURLException;
 import java.util.Map;
 
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -37,6 +38,7 @@ public class IOSLoginTests extends BaseMethodsIOS{
 //		}
 		
 		login_screen.positiveLoginProcess(username, password);
+		takeScreenshot();
 		
 	}
 	
@@ -60,6 +62,8 @@ public class IOSLoginTests extends BaseMethodsIOS{
 //		}
 		
 //		login_screen.positiveLoginProcess(username, password);
+		
+		Assert.assertEquals("Hello", "HELLO");
 		
 	}
 	

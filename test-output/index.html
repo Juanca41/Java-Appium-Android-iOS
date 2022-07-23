@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Android_-_Login_Tests" class="navigator-link">
-              <span class="suite-name border-passed">Android - Login Tests</span>
+            <a href="#" panel-name="suite-iOS_-_Login_Tests" class="navigator-link">
+              <span class="suite-name border-failed">iOS - Login Tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Android_-_Login_Tests" class="navigator-link ">
-                    <span>AndroidLoginTests.xml</span>
+                  <a href="#" panel-name="test-xml-iOS_-_Login_Tests" class="navigator-link ">
+                    <span>IOSLoginTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Android_-_Login_Tests" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                  <a href="#" panel-name="testlist-iOS_-_Login_Tests" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Android_-_Login_Tests" class="navigator-link ">
+                  <a href="#" panel-name="group-iOS_-_Login_Tests" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Android_-_Login_Tests" class="navigator-link ">
+                  <a href="#" panel-name="times-iOS_-_Login_Tests" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Android_-_Login_Tests" class="navigator-link ">
+                  <a href="#" panel-name="reporter-iOS_-_Login_Tests" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Android_-_Login_Tests" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-iOS_-_Login_Tests" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Android_-_Login_Tests" class="navigator-link ">
+                  <a href="#" panel-name="chronological-iOS_-_Login_Tests" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,61 +91,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-iOS_-_Login_Tests" class="hide-methods failed suite-iOS_-_Login_Tests"> (hide)</a> <!-- hide-methods failed suite-iOS_-_Login_Tests -->
+                      <a href="#" panel-name="suite-iOS_-_Login_Tests" class="show-methods failed suite-iOS_-_Login_Tests"> (show)</a> <!-- show-methods failed suite-iOS_-_Login_Tests -->
+                    </span>
+                    <div class="method-list-content failed suite-iOS_-_Login_Tests">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-iOS_-_Login_Tests" title="ios.tests.IOSLoginTests" class="method navigator-link" hash-for-method="positiveLogin2">positiveLogin2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-iOS_-_Login_Tests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Android_-_Login_Tests" class="hide-methods passed suite-Android_-_Login_Tests"> (hide)</a> <!-- hide-methods passed suite-Android_-_Login_Tests -->
-                      <a href="#" panel-name="suite-Android_-_Login_Tests" class="show-methods passed suite-Android_-_Login_Tests"> (show)</a> <!-- show-methods passed suite-Android_-_Login_Tests -->
+                      <a href="#" panel-name="suite-iOS_-_Login_Tests" class="hide-methods passed suite-iOS_-_Login_Tests"> (hide)</a> <!-- hide-methods passed suite-iOS_-_Login_Tests -->
+                      <a href="#" panel-name="suite-iOS_-_Login_Tests" class="show-methods passed suite-iOS_-_Login_Tests"> (show)</a> <!-- show-methods passed suite-iOS_-_Login_Tests -->
                     </span>
-                    <div class="method-list-content passed suite-Android_-_Login_Tests">
+                    <div class="method-list-content passed suite-iOS_-_Login_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrors({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com})">negativeLoginErrors({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-iOS_-_Login_Tests" title="ios.tests.IOSLoginTests" class="method navigator-link" hash-for-method="positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)">positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrors({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgul...)">negativeLoginErrors({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgul...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrors({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)">negativeLoginErrors({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrors({errorMessage=This field is required, password=Helloworld10, n=4, username=})">negativeLoginErrors({errorMessage=This field is required, password=Helloworld10, n=4, username=})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrorsJson({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com})">negativeLoginErrorsJson({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrorsJson({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)">negativeLoginErrorsJson({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrorsJson({errorMessage=This field is required, password=Helloworld10, username=})">negativeLoginErrorsJson({errorMessage=This field is required, password=Helloworld10, username=})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="negativeLoginErrorsJson({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte})">negativeLoginErrorsJson({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Android_-_Login_Tests" title="android.tests.AndroidLoginTests" class="method navigator-link" hash-for-method="positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)">positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Android_-_Login_Tests -->
+                    </div> <!-- method-list-content passed suite-iOS_-_Login_Tests -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -156,77 +130,36 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Android_-_Login_Tests" class="panel Android_-_Login_Tests">
-          <div class="suite-Android_-_Login_Tests-class-passed">
+        <div panel-name="suite-iOS_-_Login_Tests" class="panel iOS_-_Login_Tests">
+          <div class="suite-iOS_-_Login_Tests-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">android.tests.AndroidLoginTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">ios.tests.IOSLoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="negativeLoginErrors({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com})">
-                  </a> <!-- negativeLoginErrors({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com}) -->
-                  <span class="method-name">negativeLoginErrors</span>
-                  <span class="parameters">({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com})</span>
+                  <a name="positiveLogin2">
+                  </a> <!-- positiveLogin2 -->
+                  <span class="method-name">positiveLogin2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [HELLO] but found [Hello]
+	at ios.tests.IOSLoginTests.positiveLogin2(IOSLoginTests.java:66)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrors({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgul...)">
-                  </a> <!-- negativeLoginErrors({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgul...) -->
-                  <span class="method-name">negativeLoginErrors</span>
-                  <span class="parameters">({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgularte})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrors({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)">
-                  </a> <!-- negativeLoginErrors({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...) -->
-                  <span class="method-name">negativeLoginErrors</span>
-                  <span class="parameters">({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 characters, password=123, n=2, username=juancarlosgularte@bettervet.com})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrors({errorMessage=This field is required, password=Helloworld10, n=4, username=})">
-                  </a> <!-- negativeLoginErrors({errorMessage=This field is required, password=Helloworld10, n=4, username=}) -->
-                  <span class="method-name">negativeLoginErrors</span>
-                  <span class="parameters">({errorMessage=This field is required, password=Helloworld10, n=4, username=})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrorsJson({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com})">
-                  </a> <!-- negativeLoginErrorsJson({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com}) -->
-                  <span class="method-name">negativeLoginErrorsJson</span>
-                  <span class="parameters">({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrorsJson({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)">
-                  </a> <!-- negativeLoginErrorsJson({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...) -->
-                  <span class="method-name">negativeLoginErrorsJson</span>
-                  <span class="parameters">({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 characters, password=123, username=juancarlosgularte@bettervet.com})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrorsJson({errorMessage=This field is required, password=Helloworld10, username=})">
-                  </a> <!-- negativeLoginErrorsJson({errorMessage=This field is required, password=Helloworld10, username=}) -->
-                  <span class="method-name">negativeLoginErrorsJson</span>
-                  <span class="parameters">({errorMessage=This field is required, password=Helloworld10, username=})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="negativeLoginErrorsJson({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte})">
-                  </a> <!-- negativeLoginErrorsJson({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte}) -->
-                  <span class="method-name">negativeLoginErrorsJson</span>
-                  <span class="parameters">({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-iOS_-_Login_Tests-class-failed -->
+          <div class="suite-iOS_-_Login_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ios.tests.IOSLoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)">
@@ -236,284 +169,164 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Android_-_Login_Tests-class-passed -->
-        </div> <!-- panel Android_-_Login_Tests -->
-        <div panel-name="test-xml-Android_-_Login_Tests" class="panel">
+          </div> <!-- suite-iOS_-_Login_Tests-class-passed -->
+        </div> <!-- panel iOS_-_Login_Tests -->
+        <div panel-name="test-xml-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/jcgularte/Desktop/Cursos/Repositories/Java-Appium-Android-iOS/src/test/resources/TestSuites/android/AndroidLoginTests.xml</span>
+            <span class="header-content">/Users/jcgularte/Desktop/Cursos/Repositories/Java-Appium-Android-iOS/src/test/resources/TestSuites/ios/IOSLoginTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Android - Login Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; allow-return-values=&quot;true&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;iOS - Login Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; allow-return-values=&quot;true&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;appium.base.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Positive Login Test Android&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Positive Login Test&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;Helloworld10&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;juancarlosgularte@bettervet.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;android.tests.AndroidLoginTests&quot;&gt;
+      &lt;class name=&quot;ios.tests.IOSLoginTests&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;positiveLogin&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- android.tests.AndroidLoginTests --&gt;
+      &lt;/class&gt; &lt;!-- ios.tests.IOSLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Positive Login Test Android --&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Negative Login Test&quot;&gt;
+  &lt;/test&gt; &lt;!-- Positive Login Test --&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Positive Login Test 2&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Helloworld10&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;juancarlosgularte@bettervet.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;android.tests.AndroidLoginTests&quot;&gt;
+      &lt;class name=&quot;ios.tests.IOSLoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;negativeLoginErrors&quot;/&gt;
+          &lt;include name=&quot;positiveLogin2&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- android.tests.AndroidLoginTests --&gt;
+      &lt;/class&gt; &lt;!-- ios.tests.IOSLoginTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Negative Login Test --&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Negative Login Test JSON&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;android.tests.AndroidLoginTests&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;negativeLoginErrorsJson&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- android.tests.AndroidLoginTests --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Negative Login Test JSON --&gt;
-&lt;/suite&gt; &lt;!-- Android - Login Tests --&gt;
+  &lt;/test&gt; &lt;!-- Positive Login Test 2 --&gt;
+&lt;/suite&gt; &lt;!-- iOS - Login Tests --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Android_-_Login_Tests" class="panel">
+        <div panel-name="testlist-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Android - Login Tests</span>
+            <span class="header-content">Tests for iOS - Login Tests</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Positive Login Test Android (1 class)</span>
+                <span class="test-name">Positive Login Test (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Negative Login Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Negative Login Test JSON (1 class)</span>
+                <span class="test-name">Positive Login Test 2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Android_-_Login_Tests" class="panel">
+        <div panel-name="group-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Android - Login Tests</span>
+            <span class="header-content">Groups for iOS - Login Tests</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Android_-_Login_Tests" class="panel">
+        <div panel-name="times-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Android - Login Tests</span>
+            <span class="header-content">Times for iOS - Login Tests</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Android_-_Login_Tests');
-function tableData_Android_-_Login_Tests() {
+suiteTableInitFunctions.push('tableData_iOS_-_Login_Tests');
+function tableData_iOS_-_Login_Tests() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'negativeLoginErrorsJson')
-data.setCell(0, 2, 'android.tests.AndroidLoginTests')
-data.setCell(0, 3, 21471);
+data.setCell(0, 1, 'positiveLogin')
+data.setCell(0, 2, 'ios.tests.IOSLoginTests')
+data.setCell(0, 3, 19700);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'negativeLoginErrorsJson')
-data.setCell(1, 2, 'android.tests.AndroidLoginTests')
-data.setCell(1, 3, 20994);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'negativeLoginErrors')
-data.setCell(2, 2, 'android.tests.AndroidLoginTests')
-data.setCell(2, 3, 12829);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'negativeLoginErrors')
-data.setCell(3, 2, 'android.tests.AndroidLoginTests')
-data.setCell(3, 3, 12539);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'negativeLoginErrorsJson')
-data.setCell(4, 2, 'android.tests.AndroidLoginTests')
-data.setCell(4, 3, 12367);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'negativeLoginErrors')
-data.setCell(5, 2, 'android.tests.AndroidLoginTests')
-data.setCell(5, 3, 12278);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'positiveLogin')
-data.setCell(6, 2, 'android.tests.AndroidLoginTests')
-data.setCell(6, 3, 12092);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'negativeLoginErrors')
-data.setCell(7, 2, 'android.tests.AndroidLoginTests')
-data.setCell(7, 3, 11947);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'negativeLoginErrorsJson')
-data.setCell(8, 2, 'android.tests.AndroidLoginTests')
-data.setCell(8, 3, 11912);
-window.suiteTableData['Android_-_Login_Tests']= { tableData: data, tableDiv: 'times-div-Android_-_Login_Tests'}
+data.setCell(1, 1, 'positiveLogin2')
+data.setCell(1, 2, 'ios.tests.IOSLoginTests')
+data.setCell(1, 3, 12129);
+window.suiteTableData['iOS_-_Login_Tests']= { tableData: data, tableDiv: 'times-div-iOS_-_Login_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
-              <div id="times-div-Android_-_Login_Tests">
-              </div> <!-- times-div-Android_-_Login_Tests -->
+              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <div id="times-div-iOS_-_Login_Tests">
+              </div> <!-- times-div-iOS_-_Login_Tests -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Android_-_Login_Tests" class="panel">
+        <div panel-name="reporter-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Android - Login Tests</span>
+            <span class="header-content">Reporter output for iOS - Login Tests</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Android_-_Login_Tests" class="panel">
+        <div panel-name="ignored-methods-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">12 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">android.tests.AndroidLoginTests</span>
+              <span class="ignored-class-name">ios.tests.IOSLoginTests</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">negativeLoginErrorsJson</span>
-                <br/>
-                <span class="ignored-method-name">negativeLoginErrorsJson</span>
-                <br/>
                 <span class="ignored-method-name">positiveLogin2</span>
+                <br/>
+                <span class="ignored-method-name">negativeLoginWithInvalidCredentials</span>
+                <br/>
+                <span class="ignored-method-name">negativeLoginWithInvalidCredentials</span>
                 <br/>
                 <span class="ignored-method-name">positiveLogin</span>
-                <br/>
-                <span class="ignored-method-name">positiveLogin2</span>
-                <br/>
-                <span class="ignored-method-name">positiveLogin</span>
-                <br/>
-                <span class="ignored-method-name">positiveLogin2</span>
                 <br/>
                 <span class="ignored-method-name">negativeLoginErrors</span>
                 <br/>
                 <span class="ignored-method-name">negativeLoginErrors</span>
-                <br/>
-                <span class="ignored-method-name">negativeLoginWithInvalidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">negativeLoginWithInvalidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">negativeLoginWithInvalidCredentials</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Android_-_Login_Tests" class="panel">
+        <div panel-name="chronological-iOS_-_Login_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">android.tests.AndroidLoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ios.tests.IOSLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setCapabilities(org.testng.TestRunner@363a52f)</span>
+                <span class="method-name">setCapabilities(org.testng.TestRunner@150ab4ed)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">15248 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">positiveLogin(juancarlosgularte@bettervet.com, Helloworld10)</span>
-                <span class="method-start">16163 ms</span>
+                <span class="method-start">18783 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">shutDown</span>
-                <span class="method-start">28263 ms</span>
+                <span class="method-name">shutDownApp</span>
+                <span class="method-start">38510 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
-                <span class="method-name">setCapabilities(org.testng.TestRunner@a4add54)</span>
-                <span class="method-start">28893 ms</span>
+                <span class="method-name">setCapabilities(org.testng.TestRunner@3c435123)</span>
+                <span class="method-start">40380 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">42568 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">negativeLoginErrors({errorMessage=Please enter a valid email address, password=Helloworld10, n=1, username=juancarlosgul...)</span>
-                <span class="method-start">43372 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">56225 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrors({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)</span>
-                <span class="method-start">57320 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">69870 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrors({errorMessage=This field is required, password=, n=3, username=juancarlosgularte@bettervet.com})</span>
-                <span class="method-start">71171 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">83459 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrors({errorMessage=This field is required, password=Helloworld10, n=4, username=})</span>
-                <span class="method-start">84531 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">positiveLogin2</span>
+                <span class="method-start">57705 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">shutDown</span>
-                <span class="method-start">96487 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setCapabilities(org.testng.TestRunner@141e5bef)</span>
-                <span class="method-start">96821 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">110768 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrorsJson({errorMessage=Please enter a valid email address, password=Helloworld10, username=juancarlosgularte})</span>
-                <span class="method-start">111779 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">124158 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrorsJson({errorMessage=Your password must contain at least one number, a capital letter and a minimum of 6 ch...)</span>
-                <span class="method-start">125233 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">146713 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrorsJson({errorMessage=This field is required, password=, username=juancarlosgularte@bettervet.com})</span>
-                <span class="method-start">147718 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">goToHomeScreen</span>
-                <span class="method-start">159638 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">negativeLoginErrorsJson({errorMessage=This field is required, password=Helloworld10, username=})</span>
-                <span class="method-start">160541 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">shutDown</span>
-                <span class="method-start">181544 ms</span>
+                <span class="method-name">shutDownApp</span>
+                <span class="method-start">70125 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

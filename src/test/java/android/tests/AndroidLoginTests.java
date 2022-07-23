@@ -7,6 +7,8 @@ import java.util.Map;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import android.base.BaseMethodsAndroid;
 import android.screens.LoginScreenAndroid;
 import android.screens.WelcomeScreenAndroid;
@@ -22,8 +24,6 @@ public class AndroidLoginTests extends BaseMethodsAndroid{
 	@Parameters({ "username", "password" })
 	@Test
 	public void positiveLogin(String username, String password) throws MalformedURLException{
-		
-//		driver = setCapabilities();
 		
 		WelcomeScreenAndroid welcome_screen = new WelcomeScreenAndroid(driver, log);
 		LoginScreenAndroid login_screen = new LoginScreenAndroid(driver, log);
@@ -44,8 +44,6 @@ public class AndroidLoginTests extends BaseMethodsAndroid{
 	
 	@Test
 	public void positiveLogin2() throws MalformedURLException{
-		
-//		driver = setCapabilities();
 		
 		WelcomeScreenAndroid welcome_screen = new WelcomeScreenAndroid(driver, log);
 //		LoginScreen login_screen = new LoginScreen(driver, log);

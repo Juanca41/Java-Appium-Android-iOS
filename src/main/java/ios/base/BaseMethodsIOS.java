@@ -1,25 +1,26 @@
 package ios.base;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Properties;
+import java.util.Date;
+import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 
 import appium.base.BaseMethods;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.Activity;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
@@ -32,6 +33,8 @@ public class BaseMethodsIOS extends BaseMethods{
 	protected static IOSDriver driver;
 	protected Logger log;
 	static AppiumDriverLocalService appium;
+	protected static String testSuiteName;
+	protected static String testName;
 
 	@BeforeClass(alwaysRun = true)
 	public void setCapabilities(ITestContext ctx) throws IOException {
@@ -41,17 +44,15 @@ public class BaseMethodsIOS extends BaseMethods{
 		String testName = ctx.getCurrentXmlTest().getName(); //to get the name of the test suite
 		log = LogManager.getLogger(testName);
 		
-		FileInputStream propFile = new FileInputStream("src/main/resources/global.properties");
-		Properties prop = new Properties();
-		prop.load(propFile);
+		testSuiteName = ctx.getSuite().getName();
+//		this.testMethodName = method.getName();
 		
 		File appDir = new File("src/main/resources");
 		DesiredCapabilities caps = new DesiredCapabilities();
 		
-		File app = new File(appDir, (String) prop.get("iOSBetterVet"));
+		File app = new File(appDir, getPropData("iOSBetterVet"));
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");
-		String device = (String) prop.get("IOSDevice");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, device);
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, getPropData("IOSDevice"));
 		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);//new step
 //		caps.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.bettervet");
 		caps.setCapability(IOSMobileCapabilityType.TIMEOUTS, 50000);
@@ -68,7 +69,7 @@ public class BaseMethodsIOS extends BaseMethods{
 	}
 	
 	@AfterClass(alwaysRun = true)
-	public void shutDownApp() {
+	public void shutDownApp() throws NumberFormatException, IOException {
 //		driver.close();
 		driver.quit();
 		log.info("App closed.");
@@ -79,5 +80,50 @@ public class BaseMethodsIOS extends BaseMethods{
 //	public void shutDownAppium() {
 //		stopAppium();
 //	}
+	
+	/** Take screenshot 
+	 * @return */
+	public static String takeScreenshot() {
+		
+//		String testName = ctx.getCurrentXmlTest().getName();
+//		testSuiteName = ctx.getSuite().getName();
+//		testMethodName = method.getName();
+		
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String path = System.getProperty("user.dir")//main directory
+				+ File.separator + "test-output" 
+				+ File.separator + "screenshots"
+				+ File.separator + getTodaysDate()
+				+ File.separator + getSystemTime() 
+				+ File.separator + testSuiteName 
+				+ File.separator + testName + ".png";
+//				+ File.separator + testMethodName + ".png";
+//				+ File.separator + getSystemTime() 
+//				+ " " + fileName + ".png";
+		try {
+			FileUtils.copyFile(scrFile, new File(path));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return path;
+	}
+	
+	/** Todays date in yyyyMMdd format */
+	protected static String getTodaysDate() {
+		return (new SimpleDateFormat("yyyyMMdd").format(new Date()));
+	}
+
+	/** Current time in HHmmssSSS */
+	protected static String getSystemTime() {
+		return (new SimpleDateFormat("HHmmssSSS").format(new Date()));
+	}
+	
+	/** Get logs from browser console */
+	protected List<LogEntry> getBrowserLogs() {
+		LogEntries log = driver.manage().logs().get("browser");
+		List<LogEntry> logList = log.getAll();
+		return logList;
+	}
 
 }

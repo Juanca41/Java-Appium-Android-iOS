@@ -1,6 +1,7 @@
 package appium.base;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,14 +15,18 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
+import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVReader;
@@ -35,13 +40,36 @@ public class BaseMethods {
 	
 //	protected static IOSDriver<IOSElement> driver;
 	protected static AppiumDriver driver;
-	protected String testSuiteName;
-	protected String testName;
-	protected String testMethodName; 
 	static AppiumDriverLocalService appium;
+	protected FileInputStream propFile;
+	protected Properties prop;
+	protected static ExtentSparkReporter reportLocation;
+	protected static ExtentReports report;
 	
 	 public static void sleep(int s) throws InterruptedException {
 			Thread.sleep(s);
+	 }
+	 
+	 protected static ExtentReports reporter() {
+		 
+//		 reportLocation = new ExtentSparkReporter("test-output/reports/extent-reports/"+device+"/index.html");
+		 reportLocation = new ExtentSparkReporter("test-output/reports/extent-reports/index.html");
+		 reportLocation.config().setReportName("Mobile Automation Results");
+		 reportLocation.config().setDocumentTitle("Tests Results");
+		 
+		 report = new ExtentReports();
+		 report.attachReporter(reportLocation);
+		 report.setSystemInfo("Android Test", "Juan Gularte");
+		 
+		 return report;
+		 
+	 }
+	 
+	 public String getPropData(String parameter) throws IOException {
+		  propFile = new FileInputStream("src/main/resources/global.properties");
+		  prop = new Properties();
+		  prop.load(propFile);
+		  return (String) prop.get(parameter);
 	 }
 	 
 	@DataProvider(name = "csvReader")
@@ -93,42 +121,6 @@ public class BaseMethods {
 				});
 		return data;
 	}
-	
-	/** Take screenshot */
-	protected void takeScreenshot(String fileName) {
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir")//main directory
-				+ File.separator + "test-output" 
-				+ File.separator + "screenshots"
-				+ File.separator + getTodaysDate() 
-				+ File.separator + testSuiteName 
-				+ File.separator + testName
-				+ File.separator + testMethodName 
-				+ File.separator + getSystemTime() 
-				+ " " + fileName + ".png";
-		try {
-			FileUtils.copyFile(scrFile, new File(path));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	/** Todays date in yyyyMMdd format */
-	protected static String getTodaysDate() {
-		return (new SimpleDateFormat("yyyyMMdd").format(new Date()));
-	}
-
-	/** Current time in HHmmssSSS */
-	protected String getSystemTime() {
-		return (new SimpleDateFormat("HHmmssSSS").format(new Date()));
-	}
-	
-	/** Get logs from browser console */
-	protected List<LogEntry> getBrowserLogs() {
-		LogEntries log = driver.manage().logs().get("browser");
-		List<LogEntry> logList = log.getAll();
-		return logList;
-	}
 	 
 	 public boolean checkIfServerIsRunning(int port) {
 
@@ -146,18 +138,18 @@ public class BaseMethods {
 	    return isServerRunning;
 	 }
 
-	 public void startAppium() {
+	 public void startAppium() throws NumberFormatException, IOException {
 		 
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
         // Tell builder where node is installed. Or set this path in an environment variable named NODE_PATH
-        builder.usingDriverExecutable(new File("/usr/local/bin/node"));
+        builder.usingDriverExecutable(new File(getPropData("node")));
         // Tell builder where Appium is installed. Or set this path in an environment variable named APPIUM_PATH
-        builder.withAppiumJS(new File("/usr/local/lib/node_modules/appium/build/lib/main.js"));
-        builder.withIPAddress("127.0.0.1");
+        builder.withAppiumJS(new File(getPropData("mainJS")));
+        builder.withIPAddress(getPropData("ipAddress"));
         builder.withArgument(() -> "--base-path", "/wd/hub");
-        builder.usingPort(4723);
+        builder.usingPort(Integer.parseInt(getPropData("port")));
         
-        boolean isAppiumRunning = checkIfServerIsRunning(4723);
+        boolean isAppiumRunning = checkIfServerIsRunning(Integer.parseInt(getPropData("port")));
         
         if(isAppiumRunning == false) {
         	appium = AppiumDriverLocalService.buildService(builder);
@@ -172,9 +164,9 @@ public class BaseMethods {
         }
 	 }
 	 
-	 public void stopAppium() {
+	 public void stopAppium() throws NumberFormatException, IOException {
 		
-		boolean isAppiumRunning = checkIfServerIsRunning(4723);
+		boolean isAppiumRunning = checkIfServerIsRunning(Integer.parseInt(getPropData("port")));
         
         if(isAppiumRunning == true) {
         	appium.close();
